@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width", inital-scale="1.0">
+        <link rel="stylesheet" href="contact_styles.css"> 
+        <title>The Chop Shop | Contact</title>
+        <link rel="icon" type="image/png" href="images/rusty_truck.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <!-- navigation bar -->
+        <nav class="nav navbg">
+            <div class="container">
+                <h1 class="logo"><a href="index.html"><img src="images/Chop_shop_logo.png" alt="Chop Shop Logo"></a></h1>
+                <ul class="list-text">
+                    <li><a href="index.html">home</a></li>
+                    <span>|</span>
+                    <li><a href="services.html">services</a></li>
+                    <span>|</span>
+                    <li><a href="about.html">about</a></li>
+                    <span>|</span>
+                    <li><a href="gallery.html">gallery</a></li>
+                    <span>|</span>
+                    <li><a href="contact.html" class="current">contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="contact">
+            <div class="container">
+                <h2>Schedule an Appointment</h2>
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <h3>Personal Info</h3>
+                        <form action="" method="post">
+                            <div class="form-container">
+                                <input type="text" name="firstName" placeholder="Enter first name">
+                            </div>
+                            <div class="form-container">
+                                <input type="text" name="Lastname" placeholder="Enter last name">
+                            </div>
+                            <div class="form-container">
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter number: 123-456-7890" required>
+                            </div>
+                            <div class="form-container">
+                                <input type="email" id="email" name="email" placeholder="username@domain.com" required>
+                            </div>
+                            <div class="method-container">
+                                <label>Method of Contact:</label>
+                                <input type="checkbox" id="emailContact" name="contactMethod" value="email">
+                                <label for="emailContact">Email</label>
+                                <input type="checkbox" id="callContact" name="contactMethod" value="call">
+                                <label for="phoneContact">Call</label>
+                                <input type="checkbox" id="texContact" name="contactMethod" value="text">
+                                <label for="textContact">Text</label>
+                            </div>
+                            <div class="form-container">
+                                <div class="reason-container">
+                                    <label for="make">Select Service:</label>
+                                    <select id="make" name="make" required>
+                                        <option value="Diagnostics">Diagnostics</option>
+                                        <option value="Engine">Engine</option>
+                                        <option value="Suspension">Suspension</option>
+                                        <option value="A/C">A/C</option>
+                                        <option value="Body Restore">Body Restore</option>
+                                        <option value="Transmission">Transmission</option>
+                                        <option value="Brakes">Brakes</option>
+                                        <option value="Tire Service">Tire Services</option>
+                                        <option value="Tinting">Tinting</option>
+                                        <option value="Oil Change">Oil Change</option>
+                                        <option value="Auto Detail">Detailing</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="date-container">
+                                <label for="date">Choose Appointment Date</label>
+                                <input type="date" id="date" name="date">
+
+                            </div>
+                            
+                            <!-- Vehicle Type -->
+                            <div class="radio-container">
+                                <h4>Vehicle Information</h4>
+                                <label class="type-label">Type:</label>
+                                <label for="car">Car</label>
+                                <input type="radio" id="car" name="vehicleType" value="car" checked>
+                                <label for="truck">Truck</label>
+                                <input type="radio" id="truck" name="vehicleType" value="truck">
+                                <label for="suv">SUV</label>
+                                <input type="radio" id="suv" name="vehicleType" value="suv">
+                                <label for="motorcycle">Motorcycle</label>
+                                <input type="radio" id="motorcycle" name="vehicleType" value="motorcycle">                           
+                            </div>
+                            <br>
+                            <div class="label-container">
+                                <!-- Vehicle Make -->
+                                <label for="make">Make:</label>
+                                <select id="make" name="make" required>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Honda">Honda</option>
+                                <option value="Dodge">Dodge</option>
+                                <option value="Jeep">Jeep</option>
+                                <option value="Chrysler">Chrysler</option>
+                                <option value="Kia">Kia</option>
+                                <option value="Hyundai">Hyundai</option>
+                                <option value="Acura">Acura</option>
+                                <option value="Lincoln">Lincoln</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Lexus">Lexus</option>
+                                <option value="Mitsubishi">Mitsubishi</option>
+                                </select>
+                            </div>
+                            <div class="label-container">
+                                <!-- Vehicle Model -->
+                                <label for="model">Model:</label>
+                                <input type="text" id="model" name="model" placeholder="(e.g, Ford)" required>
+                               
+                                <!-- Vehicle Year -->
+                                <label for="year">Year:</label>
+                                <input type="number" id="year" name="year" min="1900" max="2025" placeholder="Vehicle year" required>
+                                
+                            </div>
+                            <div class="form-container msg">
+                                <label for="message">Leave a message:</label>
+                                <textarea name="message" placeholder="Type msg here..."></textarea>
+                            </div>
+                            <div class="button-container">
+                                <button type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p><i class="fas fa-phone"></i>+1-123-456-7890</p>
+                        <p><i class="fas fa-envelope"></i>makeappt@tcshop.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i>355 Street, City, Country</p>
+                    <div class="hrs-container">
+                        <h3>Hours of Operation</h3>
+                        <table class="hrs-table">
+                            <tr>
+                                <td>Monday - Friday: </td>
+                                <td>8:00am - 7:00pm</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday: </td>
+                                <td>9:00am - 8:00pm</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday: </td>
+                                <td>9:00am - 5:00pm</td>
+                            </tr>        
+                        </table>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <h3>Send us a message</h3>
+                        <form action="" method="post">
+                            <div class="form-container">
+                                <input type="text" name="firstName" placeholder="Enter first name">
+                            </div>
+                            <div class="form-container">
+                                <input type="text" name="Lastname" placeholder="Enter last name">
+                            </div>
+                            <div class="form-container">
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890" required>
+                            </div>
+                            <div class="form-container">
+                                <input type="email" id="email" name="email" placeholder="username@domain.com" required>
+                            </div>
+                            <div class="method-container">
+                                <label>Method of Contact:</label>
+                                <input type="checkbox" id="emailContact" name="contactMethod" value="email">
+                                <label for="emailContact">Email</label>
+                                <input type="checkbox" id="callContact" name="contactMethod" value="call">
+                                <label for="phoneContact">Call</label>
+                                <input type="checkbox" id="texContact" name="contactMethod" value="text">
+                                <label for="textContact">Text</label>
+                            </div>
+                            <div class="form-container">
+                                <div class="reason-container">
+                                    <label for="make">Reason:</label>
+                                    <select id="make" name="make" required>
+                                        <option value="Priceing">Pricing</option>
+                                        <option value="Appt Scheduling">Appt Scheduling</option>
+                                        <option value="Service Inquiry">Service Inquiries</option>
+                                        <option value="Estimate Requests">Estimate Requests</option>
+                                        <option value="Feedback">Feedback</option>
+                                        <option value="Customer Support">Customer Support</option>
+                                        <option value="General Support">General Support</option>
+                                        <option value="Vehicle Status">Vehicle Status</option>
+                                        <option value="Service Follow-up">Service Follow-up</option>
+                                        <option value="Insurance Claims">Insurance Claims</option>
+                                        <option value="Billing and Payments">Billing & Payments</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-container">
+                                <textarea name="message" placeholder="Type msg here..."></textarea>
+                            </div>
+                            <div class="button-container">
+                                <button type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p><i class="fas fa-phone"></i>+1-123-456-7890</p>
+                        <p><i class="fas fa-envelope"></i>support@tcshop.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i>355 Street, City, Country</p>
+                        <div class="hrs-container">
+                            <h3>Hours of Operation</h3>
+                            <table class="hrs-table">
+                                <tr>
+                                    <td>Monday - Friday: </td>
+                                    <td>8:00am - 7:00pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday: </td>
+                                    <td>9:00am - 8:00pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday: </td>
+                                    <td>9:00am - 5:00pm</td>
+                                </tr>        
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--footer -->
+        <footer class="site-footer">
+            <div class="container">
+            <div class="row">
+                <div class="">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="about.html" target="_blank">About Us</a></li>
+                    <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                    <li><a href="https://www.bbb.org/file-a-complaint" target="_blank">Warranty</a></li>
+                    <li><a href="https://www.dol.gov/" target="_blank">Careers</a></li>
+                </ul>
+                </div>
+            </div>
+            <hr>
+            </div>
+            <div class="container">
+            <div class="row">
+                <div class="">
+                <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by Justin Spears
+                </p>
+                </div>
+                <div class="">
+                <ul class="social-icons">
+                    <li><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="https://twitter.com/?lang=en" target="_blank"><i class="fa-brands fa-twitter"></i></a></li> 
+                    <li><a class="instagram" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li> 
+                    <li><a class="linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li> 
+                </ul>
+                </div>
+            </div>
+            </div>
+        <script src="contact_script.js"></script>
+    </body>
+</html>
